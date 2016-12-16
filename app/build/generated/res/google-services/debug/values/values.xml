@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">593674452874-nlhni7ofj13ombm8q8e3jkr3o69lgrcv.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://picfood-df98e.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">593674452874</string>
+    <string name="google_api_key" translatable="false">AIzaSyDD1_zqVn3Nxct1onS4SuxXvRmSY3PetFw</string>
+    <string name="google_app_id" translatable="false">1:593674452874:android:1b032907ed370303</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDD1_zqVn3Nxct1onS4SuxXvRmSY3PetFw</string>
+    <string name="google_storage_bucket" translatable="false">picfood-df98e.appspot.com</string>
+</resources>
