@@ -5,33 +5,32 @@
     density="xxhdpi"
     format="8"
     plugin-version="2.2.2"
-    timestamp="238567758691254"
-    token="-3800472840004941159"
-    verifier="FULL_BUILD_REQUESTED" >
+    timestamp="964198503482089"
+    token="3867410891271743983"
+    verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="3870" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="2124" />
+        duration="0" />
     <task
         name="verifier"
-        duration="175" />
-
-    <artifact
-        location="C:\Users\user\PicFood\app\build\outputs\apk\app-debug.apk"
-        type="MAIN" />
+        duration="0" />
 
     <build
-        timestamp="238567758691254"
+        timestamp="963881256699615"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\user\PicFood\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
+    <build
+        timestamp="964198503482089"
+        verifier="COLD_SWAP_REQUESTED" />
 
 </instant-run>

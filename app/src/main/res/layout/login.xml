@@ -3,21 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-
-    tools:context="com.example.g509.picfood.project"
-
-    >
-
+    tools:context="android.picfood.login">
 
     <ImageView
         android:layout_width="fill_parent"
         android:layout_height="200dp"
         android:id="@+id/pict"
         android:src="@drawable/pic"
-
-
-        android:layout_marginTop="-20dp"
-        />
+        android:layout_marginTop="-20dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -40,6 +33,7 @@
         android:textColor="#0099FF"
         android:layout_below="@+id/pict"
         android:layout_alignStart="@+id/pict" />
+
     <EditText
         android:padding="5dip"
         android:layout_width="250dp"
@@ -59,7 +53,6 @@
         android:hint="請輸入密碼"
         android:id="@+id/password"
         android:inputType="textPassword"
-
         android:layout_marginTop="340dp"
         android:layout_centerHorizontal="true" />
 
@@ -68,7 +61,6 @@
         android:layout_height="wrap_content"
         android:text="Login"
         android:id="@+id/button"
-
         android:layout_below="@+id/password"
         android:layout_alignEnd="@+id/password"
         android:textSize="30dp" />

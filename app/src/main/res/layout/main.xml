@@ -3,21 +3,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-
-    tools:context="com.example.g509.picfood.project"
-
-    >
-
+    tools:context="android.picfood.main">
 
     <ImageView
         android:layout_width="fill_parent"
         android:layout_height="200dp"
         android:id="@+id/pict"
         android:src="@drawable/pic"
+        android:layout_marginTop="-20dp" />
 
-
-        android:layout_marginTop="-20dp"
-        />
+    <Button
+        android:id="@+id/login"
+        android:text="Log In"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:layout_width="190dp"
+        android:layout_height="32dp"
+        android:background="@drawable/buttonshape"
+        android:layout_marginBottom="148dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -30,6 +35,21 @@
         android:layout_above="@+id/topic2"
         android:layout_alignStart="@+id/pict" />
 
+    <Button
+        android:id="@+id/guest"
+        android:text="Create"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:layout_width="190dp"
+        android:layout_height="32dp"
+        android:background="@drawable/buttonshape1"
+        android:shadowColor="#191616"
+        android:elevation="10dp"
+        android:layout_marginBottom="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:singleLine="false" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -41,5 +61,5 @@
         android:layout_below="@+id/pict"
         android:layout_alignStart="@+id/pict" />
 
-
 </RelativeLayout>
+
