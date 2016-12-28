@@ -1,5 +1,6 @@
 package android.picfood;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -8,7 +9,9 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -24,11 +27,12 @@ public class login extends AppCompatActivity {
     FirebaseAuth auth_log;
     FirebaseAuth.AuthStateListener authListener;
     String userUID;
+    private InputMethodManager manager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
-
+        manager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         //
         auth_log = FirebaseAuth.getInstance();
         authListener = new FirebaseAuth.AuthStateListener() {
@@ -52,9 +56,9 @@ public class login extends AppCompatActivity {
         topic2.setTypeface(font);
 
         Button btn=(Button) findViewById(R.id.button);
-        Button fb=(Button) findViewById(R.id.face);
+
         btn.setTypeface(font);
-        fb.setTypeface(font);
+
         //font end
 
         btn.setOnClickListener(new View.OnClickListener() {
@@ -110,5 +114,18 @@ public class login extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         auth_log.removeAuthStateListener(authListener);
+    }
+
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        // TODO Auto-generated method stub
+        if (event.getAction() == MotionEvent.ACTION_DOWN) {
+            if (getCurrentFocus() != null
+                    && getCurrentFocus().getWindowToken() != null) {
+                manager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+            }
+        }
+        return super.onTouchEvent(event);
     }
 }

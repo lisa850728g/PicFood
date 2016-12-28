@@ -1,5 +1,6 @@
 package android.picfood;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -8,7 +9,9 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -28,7 +31,7 @@ import com.google.firebase.database.ValueEventListener;
 public class create_user extends AppCompatActivity {
     FirebaseAuth auth_sign;
     DatabaseReference myRef = FirebaseDatabase.getInstance().getReference("users");
-
+    private InputMethodManager manager;
     String name = "";
     String email = "";
     String pw = "";
@@ -38,6 +41,7 @@ public class create_user extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.create_user);
         auth_sign = FirebaseAuth.getInstance();
+        manager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
 
         //font
         Typeface font = Typeface.createFromAsset(getAssets(), "fonts/NanumBrushScript-Regular.ttf");
@@ -130,5 +134,16 @@ public class create_user extends AppCompatActivity {
     boolean isEmailValid(CharSequence email) {
         return android.util.Patterns.EMAIL_ADDRESS.matcher(email)
                 .matches();
+    }
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        // TODO Auto-generated method stub
+        if (event.getAction() == MotionEvent.ACTION_DOWN) {
+            if (getCurrentFocus() != null
+                    && getCurrentFocus().getWindowToken() != null) {
+                manager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+            }
+        }
+        return super.onTouchEvent(event);
     }
 }

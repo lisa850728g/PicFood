@@ -16,6 +16,7 @@ package="android.picfood">
         </intent-filter>
     </activity>
     <activity android:name=".login"></activity>
+
     <activity android:name=".create_user"></activity>
 
 </application>
