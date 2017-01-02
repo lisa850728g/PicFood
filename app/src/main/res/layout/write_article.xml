@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/product"
+        android:layout_alignBaseline="@+id/text_product"
+        android:layout_alignBottom="@+id/text_product"
+        android:layout_toEndOf="@+id/text_product"
+        android:layout_marginStart="17dp" />
+
+    <Button
+        android:text="發佈"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/button_release" />
+
+    <ImageView
+        android:layout_marginTop="56dp"
+        android:id="@+id/imageView"
+        android:layout_height="100dp"
+        android:layout_width="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/comment"
+        android:layout_marginStart="15dp"
+        android:background="@drawable/camera"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:text="product :"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:id="@+id/text_product"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_toEndOf="@+id/imageView" />
+
+    <TextView
+        android:text="store :"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_store"
+        android:layout_alignBottom="@+id/imageView"
+        android:layout_toStartOf="@+id/product"
+        android:layout_marginBottom="12dp" />
+
+    <EditText
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_marginTop="22dp"
+        android:id="@+id/comment"
+        android:layout_height="300dp"
+        android:layout_width="350dp"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/button_release" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/store"
+        android:layout_alignBaseline="@+id/text_store"
+        android:layout_alignBottom="@+id/text_store"
+        android:layout_alignStart="@+id/product" />
+</RelativeLayout>

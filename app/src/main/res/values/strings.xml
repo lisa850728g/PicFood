@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">PicFood</string>
+    <string name="action_plus">Plus</string>
 </resources>
