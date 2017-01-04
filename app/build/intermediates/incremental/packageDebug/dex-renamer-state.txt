@@ -1,7 +1,7 @@
-#Mon Jan 02 16:30:53 CST 2017
-base.0=C\:\\Users\\user\\Desktop\\PicFood\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_83057d89d9ea3dfa9cfdd240a5ccea254b864154
-renamed.1=classes2.dex
-renamed.0=classes.dex
-file.1=C\:\\Users\\user\\Desktop\\PicFood\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_2a3f66f9042d27acd371dfba22d1014ca17603aa\\classes.dex
-base.1=C\:\\Users\\user\\Desktop\\PicFood\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_2a3f66f9042d27acd371dfba22d1014ca17603aa
-file.0=C\:\\Users\\user\\Desktop\\PicFood\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_83057d89d9ea3dfa9cfdd240a5ccea254b864154\\classes.dex
+#Thu Jan 05 00:14:28 CST 2017
+base.0=C\:\\Users\\user\\PicFood\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_141e65a41c30168d5764fa19c88a32ebc85c0011
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=C\:\\Users\\user\\PicFood\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_0ca5173fc05adbf190f7da55e7d47c2515119818\\classes.dex
+base.1=C\:\\Users\\user\\PicFood\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_0ca5173fc05adbf190f7da55e7d47c2515119818
+file.0=C\:\\Users\\user\\PicFood\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_141e65a41c30168d5764fa19c88a32ebc85c0011\\classes.dex

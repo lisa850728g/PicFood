@@ -35,7 +35,6 @@ public class create_user extends AppCompatActivity {
     String name = "";
     String email = "";
     String pw = "";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,12 +59,12 @@ public class create_user extends AppCompatActivity {
                 pw = ((EditText) findViewById(R.id.pw)).getText().toString();
                 String checkPw = ((EditText) findViewById(R.id.checkpw)).getText().toString();
                 if (name.equals("") || email.equals("") || pw.equals("") || checkPw.equals("")) {
-                    Toast.makeText(create_user.this, "Please fill in all spaces.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(create_user.this, "Please fill in all spaces.", Toast.LENGTH_SHORT).show();
                 } else {
                     if (!checkPw.equals(pw)) {
-                        Toast.makeText(create_user.this, "Please recheck the passwords.", Toast.LENGTH_LONG).show();
+                        Toast.makeText(create_user.this, "Please recheck the passwords.", Toast.LENGTH_SHORT).show();
                     } else if (pw.length() < 6) {
-                        Toast.makeText(create_user.this, "Password must be upper than 6.", Toast.LENGTH_LONG).show();
+                        Toast.makeText(create_user.this, "Password must be upper than 6.", Toast.LENGTH_SHORT).show();
                     } else {
                         upInfo(name,email,pw);
                     }
@@ -80,7 +79,7 @@ public class create_user extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists()) {
-                    Toast.makeText(create_user.this, "This name is already been used.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(create_user.this, "This name is already been used.", Toast.LENGTH_SHORT).show();
                 } else {
                     createUser(name, email, pw);
                 }
@@ -114,11 +113,11 @@ public class create_user extends AppCompatActivity {
                                                         }
                                                     })
                                             .show();
-                                    myRef.child(name).child("name").setValue(name);
-                                    myRef.child(name).child("email").setValue(email);
+                                    myRef.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("Name").setValue(name);
+                                    myRef.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("Email").setValue(email);
                                 } else {
                                     if (!isEmailValid(email))
-                                        Toast.makeText(create_user.this, "Invalid email address", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(create_user.this, "Invalid email address", Toast.LENGTH_SHORT).show();
                                 }
                             }
                         })
@@ -126,7 +125,7 @@ public class create_user extends AppCompatActivity {
                     @Override
                     public void onFailure(@NonNull Exception e) {
                         Log.e("create.class", e.getMessage());
-                        Toast.makeText(create_user.this, e.getMessage(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(create_user.this, e.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 });
     }

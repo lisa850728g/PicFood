@@ -1,9 +1,5 @@
 [
     {
-        "merged": "C:\\Users\\user\\Desktop\\PicFood\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\ic_launcher.png",
-        "source": "C:\\Users\\user\\Desktop\\PicFood\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
-    },
-    {
         "merged": "C:\\Users\\user\\PicFood\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\ic_launcher.png",
         "source": "C:\\Users\\user\\PicFood\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     }

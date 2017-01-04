@@ -280,6 +280,7 @@
             
             <flag name="all" value="0x77"/>
         </attr></declare-styleable>
+    <declare-styleable name="CropImageView"><attr name="cropGuidelines"><enum name="off" value="0"/><enum name="onTouch" value="1"/><enum name="on" value="2"/></attr><attr name="cropScaleType"><enum name="fitCenter" value="0"/><enum name="center" value="1"/><enum name="centerCrop" value="2"/><enum name="centerInside" value="3"/></attr><attr name="cropShape"><enum name="rectangle" value="0"/><enum name="oval" value="1"/></attr><attr format="boolean" name="cropAutoZoomEnabled"/><attr format="integer" name="cropMaxZoom"/><attr format="boolean" name="cropMultiTouchEnabled"/><attr format="boolean" name="cropFixAspectRatio"/><attr format="integer" name="cropAspectRatioX"/><attr format="integer" name="cropAspectRatioY"/><attr format="float" name="cropInitialCropWindowPaddingRatio"/><attr format="dimension" name="cropBorderLineThickness"/><attr format="color" name="cropBorderLineColor"/><attr format="dimension" name="cropBorderCornerThickness"/><attr format="dimension" name="cropBorderCornerOffset"/><attr format="dimension" name="cropBorderCornerLength"/><attr format="color" name="cropBorderCornerColor"/><attr format="dimension" name="cropGuidelinesThickness"/><attr format="color" name="cropGuidelinesColor"/><attr format="color" name="cropBackgroundColor"/><attr format="dimension" name="cropSnapRadius"/><attr format="dimension" name="cropTouchRadius"/><attr format="boolean" name="cropShowCropOverlay"/><attr format="boolean" name="cropShowProgressBar"/><attr format="dimension" name="cropMinCropWindowWidth"/><attr format="dimension" name="cropMinCropWindowHeight"/><attr format="float" name="cropMinCropResultWidthPX"/><attr format="float" name="cropMinCropResultHeightPX"/><attr format="float" name="cropMaxCropResultWidthPX"/><attr format="float" name="cropMaxCropResultHeightPX"/></declare-styleable>
     <declare-styleable name="DesignTheme"><attr format="reference" name="bottomSheetDialogTheme"/><attr format="reference" name="bottomSheetStyle"/><attr format="color" name="textColorError"/></declare-styleable>
     <declare-styleable name="DrawerArrowToggle"><attr format="color" name="color"/><attr format="boolean" name="spinBars"/><attr format="dimension" name="drawableSize"/><attr format="dimension" name="gapBetweenBars"/><attr format="dimension" name="arrowHeadLength"/><attr format="dimension" name="arrowShaftLength"/><attr format="dimension" name="barLength"/><attr format="dimension" name="thickness"/></declare-styleable>
     <declare-styleable name="FloatingActionButton"><attr name="backgroundTint"/><attr name="backgroundTintMode"/><attr format="color" name="rippleColor"/><attr name="fabSize">
@@ -534,6 +535,7 @@
     <dimen name="notification_large_icon_height">64dp</dimen>
     <dimen name="notification_large_icon_width">64dp</dimen>
     <dimen name="notification_subtext_size">12dp</dimen>
+    <item name="crop_image_menu_crop" type="drawable"/>
     <drawable name="notification_template_icon_bg">#3333B5E5</drawable>
     <item name="action_bar_activity_content" type="id"/>
     <item name="action_bar_spinner" type="id"/>
@@ -607,6 +609,10 @@
     <string name="common_open_on_phone">Open on phone</string>
     <string name="common_signin_button_text">Sign in</string>
     <string name="common_signin_button_text_long">Sign in with Google</string>
+    <string name="crop_image_activity_title"/>
+    <string name="crop_image_menu_crop">Crop</string>
+    <string name="crop_image_menu_rotate_left">Rotate counter clockwise</string>
+    <string name="crop_image_menu_rotate_right">Rotate</string>
     <string name="default_web_client_id" translatable="false">1063538673051-qiocui1j0hv2ivea02ii40a9lh0eaiq5.apps.googleusercontent.com</string>
     <string name="firebase_database_url" translatable="false">https://picfood-bd20c.firebaseio.com</string>
     <string name="gcm_defaultSenderId" translatable="false">1063538673051</string>
@@ -614,6 +620,7 @@
     <string name="google_app_id" translatable="false">1:1063538673051:android:f26bfc29c9beb731</string>
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyA7TkiqkFzxsPAoxvso2pzDYssZvOLxxHQ</string>
     <string name="google_storage_bucket" translatable="false">picfood-bd20c.appspot.com</string>
+    <string name="pick_image_intent_chooser_title">Select source</string>
     <string name="search_menu_title">Search</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
