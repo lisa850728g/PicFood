@@ -2,301 +2,283 @@
 <items version="2" >
 
     <item
-        is-multidex="true"
-        jar="C:\Users\user\PicFood\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
-        <dex dex="C:\Users\user\PicFood\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-24.2.1_cd4e10cf422f18498506d52c25289192e17b8602\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\user\PicFood\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="C:\Users\user\PicFood\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-24.2.1_d4395d5192890431655d50722dc82fa82f0b10e7\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\user\PicFood\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\10.0.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="6addaba208e21c6da776d0ca75b6b23a6ccd5499">
-        <dex dex="C:\Users\user\PicFood\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tasks-10.0.1_dd32b5fe64910aca08983833eb6c4199a433a4ed\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\user\PicFood\app\build\intermediates\exploded-aar\com.android.support\design\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
-        <dex dex="C:\Users\user\PicFood\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-24.2.1_5b7ce1a4554b8ece73e72a506c8f3c55708c24d8\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\user\PicFood\app\build\intermediates\exploded-aar\com.google.firebase\firebase-storage-common\10.0.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="09cf6aa1390f95157e8295d02be7868f568825fc">
-        <dex dex="C:\Users\user\PicFood\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-storage-common-10.0.1_29e0ee2a3b90ff36b8d5579ee013bdf7b62bbe58\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\user\PicFood\app\build\intermediates\exploded-aar\com.google.firebase\firebase-storage\10.0.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="dd39827d2067497e60e21da48a7926000b6d4b0c">
-        <dex dex="C:\Users\user\PicFood\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-storage-10.0.1_b1d1bfeb9eea4da6ebe8c72b7a8abebdf6076b54\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\user\PicFood\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
-        <dex dex="C:\Users\user\PicFood\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_ed79cf5dd57b479fcafb14779bf55df1f78e0fbf\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\user\PicFood\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
-        <dex dex="C:\Users\user\PicFood\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-24.2.1_6732b68c49646b31975e2adf2fee95fa89eca7e0\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\user\PicFood\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\10.0.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="486371f97baad8e607f332f20fee1d3dd00a731a">
-        <dex dex="C:\Users\user\PicFood\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-iid-10.0.1_400c9831aae6f379cdd5f4eb90dcf07c807ba10a\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\user\PicFood\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\10.0.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="eb0d830e3eabb9deb9ec44869cf7ac7ea1ad794c">
-        <dex dex="C:\Users\user\PicFood\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-common-10.0.1_81c62afafd4592850946b0010bee19b846ebdd84\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\user\PicFood\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
-        <dex dex="C:\Users\user\PicFood\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-24.2.1_e31e72090fc8f8af2ccb69bfd074923241032dc4\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\user\PicFood\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
-        <dex dex="C:\Users\user\PicFood\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-24.2.1_12a64d84b3602f258e30821649672a94e5cb3616\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\user\PicFood\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database\10.0.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="8f128aeeb7e31271b28a7adb9dac1f3a6ed9f5e7">
-        <dex dex="C:\Users\user\PicFood\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-database-10.0.1_2a662c0a62b77d19ba5a97e9cf43db3e79405c7a\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\user\PicFood\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
-        <dex dex="C:\Users\user\PicFood\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.2.1_df53572fcf9cc6933b8be392e231e52e8a738fef\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\user\PicFood\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
-        <dex dex="C:\Users\user\PicFood\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-24.2.1_a2ded5697ac5e43df8f433e88b4d2866601724f2\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\user\PicFood\app\build\intermediates\exploded-aar\com.theartofdev.edmodo\android-image-cropper\2.3.1\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\exploded-aar\com.theartofdev.edmodo\android-image-cropper\2.3.1\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.1"
         sha1="1a32a39a9fcae3d354a312cdb78c18159fa702e6">
-        <dex dex="C:\Users\user\PicFood\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.theartofdev.edmodo-android-image-cropper-2.3.1_bfabc716922e15952d98966a063e9806126839c7\classes.dex" />
+        <dex dex="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\pre-dexed\debug\com.theartofdev.edmodo-android-image-cropper-2.3.1_60f05f514f77a1c7e4a62222d31cb0b11513eb95.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\user\PicFood\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\10.0.1\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\10.0.1\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.1"
-        sha1="433f4d6aa5f21f19552afe0e6c5eff0fedba73ad">
-        <dex dex="C:\Users\user\PicFood\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-analytics-10.0.1_47259284b9198090cffb3f3dcdc915a4ea7c8180\classes.dex" />
+        sha1="486371f97baad8e607f332f20fee1d3dd00a731a">
+        <dex dex="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-iid-10.0.1_dba90d96c729f2823250aec6533d54a8dd76d5dd.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\user\PicFood\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.1"
-        sha1="14b10c26fa11bd264c4056fe975ea9a88ba7873d">
-        <dex dex="C:\Users\user\PicFood\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_141e65a41c30168d5764fa19c88a32ebc85c0011\classes.dex" />
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-24.2.1_1d80548c89af818fee09c3f05a1a7edd7fd7b3d9.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\user\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\10.0.1\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.1"
-        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
-        <dex dex="C:\Users\user\PicFood\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.2.1_0103f83adf5d37a9d29f1aa525ed237be18f660e\classes.dex" />
+        sha1="eb0d830e3eabb9deb9ec44869cf7ac7ea1ad794c">
+        <dex dex="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-common-10.0.1_6e053da65876c382e488b4eac68e2568fd4f8191.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\user\PicFood\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-24.2.1_5bbebd1f948a87c8843ae4928080c5ff23de125f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.1"
         sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
-        <dex dex="C:\Users\user\PicFood\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-24.2.1_62cb0709b321ba34db226c7234a5fc2d3ee7b675\classes.dex" />
+        <dex dex="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-24.2.1_49b9b73833a5d4f962bbae0533724fc1282b3164.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\user\PicFood\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database\10.0.1\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.1"
-        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
-        <dex dex="C:\Users\user\PicFood\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_c331522039796eda9e957680e1448041c15ad6ed\classes.dex" />
+        sha1="8f128aeeb7e31271b28a7adb9dac1f3a6ed9f5e7">
+        <dex dex="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-database-10.0.1_2b35230a40e05685e95e8ad792fa6350958779de.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\user\PicFood\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\exploded-aar\com.android.support\design\24.2.1\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.1"
-        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
-        <dex dex="C:\Users\user\PicFood\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_2b1496cfd2b48bbf6bbe52bbc44ad932acb4bcfa\classes.dex" />
+        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
+        <dex dex="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\pre-dexed\debug\com.android.support-design-24.2.1_a71f9a1dafee96950543dbf38729210e3e140518.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\user\PicFood\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\10.0.1\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.1"
-        sha1="756f6297eef79784f5e356dcd4f39865028b2bd0">
-        <dex dex="C:\Users\user\PicFood\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-10.0.1_70ffb95f14e5f156cde6c0d0bf07d99edcc6c780\classes.dex" />
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-24.2.1_dbc48c0937c8fb28e0daedebed36ed12411a44d9.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\user\PicFood\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\10.0.1\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-24.2.1_bd8697c67fd4ef253b54da91d6f99cc470ee210b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\10.0.1\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.1"
         sha1="6116e0e7069de7fc259aac8e08b84f32c2038231">
-        <dex dex="C:\Users\user\PicFood\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-analytics-impl-10.0.1_9394ba14cdd41612f1eb9eedc16e6628430cd34d\classes.dex" />
+        <dex dex="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-analytics-impl-10.0.1_8e91f0f2239a7152689de7bd8a30be581961e5b3.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\user\PicFood\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\10.0.1\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.1"
-        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
-        <dex dex="C:\Users\user\PicFood\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_b4f5570df0870078821da1c5d284ea888110d307\classes.dex" />
+        sha1="433f4d6aa5f21f19552afe0e6c5eff0fedba73ad">
+        <dex dex="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-analytics-10.0.1_2675cb08e69c0d706fdfa9d2b9c16c2808f6b0b7.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\user\PicFood\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.1"
         sha1="867dad63c33388ff8c7644b236579355036d075f">
-        <dex dex="C:\Users\user\PicFood\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_722c5a4e591e81feae9c98aa1c9a73c6b6776c66\classes.dex" />
+        <dex dex="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_f91359981807eb99c06801133cf2e414b9456a9e.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\user\PicFood\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database-connection\10.0.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="8010ae6ed32828a145b25ec97bc07b7a83c6318f">
-        <dex dex="C:\Users\user\PicFood\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-database-connection-10.0.1_ebd366f03d94b25e1119beaefa09e57d9be2fb36\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\user\PicFood\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
-        <dex dex="C:\Users\user\PicFood\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-24.2.1_fe8e5e3b0b532b9f2a674d14ca95cd46a6762bd6\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\user\PicFood\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth\10.0.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="9cca2818594cc5348806d6662133491e7ea0fa8d">
-        <dex dex="C:\Users\user\PicFood\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-10.0.1_127006521a5cfa9d6b3cae7bae88883ba1bd3ac7\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\user\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
-        <dex dex="C:\Users\user\PicFood\app\build\intermediates\transforms\dex\debug\folders\1000\10\picasso-2.5.2_a69735fb31405abb6c5b972e1b2bb4f918f620e8\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\user\PicFood\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="98a1d42c1ab31aa6ab6b3fc3c96adfb9301b75ea">
-        <dex dex="C:\Users\user\PicFood\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_0ca5173fc05adbf190f7da55e7d47c2515119818\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\user\PicFood\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\10.0.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.1"
-        sha1="25438f55fc6d906a0e72f30b21487541430ede43">
-        <dex dex="C:\Users\user\PicFood\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-10.0.1_f095e2e2dc02cbd2c10a1f37a5d68e358a4bb6b6\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\user\PicFood\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.1"
         sha1="d5c731fc64c03dfe04d51134955b483551c35849">
-        <dex dex="C:\Users\user\PicFood\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-24.2.1_3cc9f574c72a729c8ff80ff6beacfd49e714c571\classes.dex" />
+        <dex dex="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-24.2.1_4c7ccd146ff57f72f159513dde644b91e854ce4d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_de3b37a697905b6f2b5fd230690982253cbf2c42.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database-connection\10.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="8010ae6ed32828a145b25ec97bc07b7a83c6318f">
+        <dex dex="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-database-connection-10.0.1_a569a43415d79e2a35ae5880361faa3de9291ded.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth\10.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="9cca2818594cc5348806d6662133491e7ea0fa8d">
+        <dex dex="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-auth-10.0.1_b984fd47c9161fb640c0ebdbf026176e316f1d16.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
+        <dex dex="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-24.2.1_9b12e99fdbab8baff9568b7a68789f75b3414c59.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\10.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="25438f55fc6d906a0e72f30b21487541430ede43">
+        <dex dex="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-base-10.0.1_2de9b1056d388c0dba5368421751ce2730e5b7b3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\exploded-aar\com.google.firebase\firebase-storage\10.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="dd39827d2067497e60e21da48a7926000b6d4b0c">
+        <dex dex="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-storage-10.0.1_c523c4ebffb516b6d90a1acfaa4038217079814c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-24.2.1_dd63806bd29ce42fed892c41f162b6ff3bbea936.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\10.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="6addaba208e21c6da776d0ca75b6b23a6ccd5499">
+        <dex dex="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-tasks-10.0.1_b532e5f8aa12cdbde68a277f5a5c5dd534c34fe3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-24.2.1_5fbdb0a9ccc4f5f0f169e3e09cf4052108cdf9c0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\10.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="756f6297eef79784f5e356dcd4f39865028b2bd0">
+        <dex dex="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-basement-10.0.1_d828ac80be128cced02dec7df60205cd9156fe41.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\exploded-aar\com.google.firebase\firebase-storage-common\10.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="09cf6aa1390f95157e8295d02be7868f568825fc">
+        <dex dex="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-storage-common-10.0.1_84713cebba84813c96923ee05ecd8e99287a7600.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\USER\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\pre-dexed\debug\support-annotations-24.2.1_6eb5b0421016e03d19047a5dd1efdd7c7a6709e9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_53f3a13bac56b7d2af4575d945c2d416838b86a4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\USER\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\pre-dexed\debug\picasso-2.5.2_596b4e77fa0209008cb500ba04c21d575d754025.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_a8ba572485a87168d851cbeeeaf43055d4d43eaa.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-24.2.1_ad38912b7bcd6fad52dfbcf3961a79db7e521981.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_75fc2ff8c9014d8801f99fe8244522ed2c24e308.jar" />
     </item>
 
 </items>

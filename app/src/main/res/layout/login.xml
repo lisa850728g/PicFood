@@ -49,7 +49,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColorHint="#AAAAAA"
-            android:hint="請輸入電子郵件"
+            android:hint="Email"
             android:id="@+id/account"
             android:inputType="textEmailAddress"
             android:ems="20"
@@ -72,7 +72,7 @@
             android:layout_height="wrap_content"
             android:textColorHint="#AAAAAA"
             android:ems="20"
-            android:hint="請輸入密碼"
+            android:hint="Password"
             android:id="@+id/password"
             android:inputType="textPassword"
 
@@ -93,3 +93,4 @@
         android:layout_alignEnd="@+id/two3" />
 
 </RelativeLayout>
+

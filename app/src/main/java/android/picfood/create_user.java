@@ -49,7 +49,20 @@ public class create_user extends AppCompatActivity {
         topic.setTypeface(font);
         topic2.setTypeface(font);
         //font end
+        Button bk = (Button)findViewById(R.id.back);
+        bk.setOnClickListener(new Button.OnClickListener(){
 
+            @Override
+
+            public void onClick(View v) {
+
+                Intent intent = new Intent();
+                intent.setClass(create_user.this, main.class);
+                startActivity(intent);
+                finish();
+            }
+
+        });
         Button signEnter = (Button) findViewById(R.id.signEnter);
         signEnter.setOnClickListener(new Button.OnClickListener() {
             @Override

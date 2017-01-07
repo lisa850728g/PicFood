@@ -1,6 +1,7 @@
 package android.picfood;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -14,10 +15,20 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class show_in_square extends AppCompatActivity{
+
     @Override
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.show_in_square);
+
+        Typeface font = Typeface.createFromAsset(getAssets(), "fonts/NanumBrushScript-Regular.ttf");
+
+        TextView textView = (TextView)findViewById(R.id.textView);
+        TextView topic = (TextView)findViewById(R.id.topic);
+        TextView topic2 = (TextView)findViewById(R.id.topic2);
+        topic.setTypeface(font);
+        topic2.setTypeface(font);
+        textView.setTypeface(font);
 
         final TextView t = (TextView)findViewById(R.id.textView);
 

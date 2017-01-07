@@ -1,5 +1,6 @@
 package android.picfood;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -32,7 +33,8 @@ public class login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
-
+        manager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        //
         auth_log = FirebaseAuth.getInstance();
         authListener = new FirebaseAuth.AuthStateListener() {
             @Override
@@ -48,12 +50,16 @@ public class login extends AppCompatActivity {
 
         //font
         Typeface font = Typeface.createFromAsset(getAssets(), "fonts/NanumBrushScript-Regular.ttf");
+
         TextView topic = (TextView)findViewById(R.id.topic);
         TextView topic2 = (TextView)findViewById(R.id.topic2);
         topic.setTypeface(font);
         topic2.setTypeface(font);
+
         Button btn=(Button) findViewById(R.id.button);
+
         btn.setTypeface(font);
+
         //font end
 
         btn.setOnClickListener(new View.OnClickListener() {
@@ -63,7 +69,7 @@ public class login extends AppCompatActivity {
                 final String password = ((EditText) findViewById(R.id.password)).getText().toString();
                 Log.d("AUTH", account + "/" + password);
                 if (account.equals("") || password.equals("")) {
-                    Toast.makeText(login.this, "Please enter email and password.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(login.this, "Please enter email and password.", Toast.LENGTH_LONG).show();
                 }else{
                     auth_log.signInWithEmailAndPassword(account, password)
                             .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
@@ -103,18 +109,17 @@ public class login extends AppCompatActivity {
             }
         });
     }
-
     @Override
     protected void onStart() {
         super.onStart();
         auth_log.addAuthStateListener(authListener);
     }
-
     @Override
     protected void onStop() {
         super.onStop();
         auth_log.removeAuthStateListener(authListener);
     }
+
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
