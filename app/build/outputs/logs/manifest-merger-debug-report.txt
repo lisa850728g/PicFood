@@ -39,7 +39,7 @@ MERGED from [com.android.support:support-core-ui:24.2.1] C:\Users\USER\Desktop\a
 MERGED from [com.android.support:support-core-utils:24.2.1] C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-compat:24.2.1] C:\Users\USER\Desktop\android\PicFood\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\AndroidManifest.xml:25:5-20
 	android:label
-		ADDED from C:\Users\USER\Desktop\android\PicFood\app\src\main\AndroidManifest.xml:10:9-41
+		ADDED from C:\Users\USER\Desktop\android\PicFood\app\src\main\AndroidManifest.xml:10:9-25
 	android:supportsRtl
 		ADDED from C:\Users\USER\Desktop\android\PicFood\app\src\main\AndroidManifest.xml:11:9-35
 	android:allowBackup

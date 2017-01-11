@@ -1,5 +1,6 @@
 package android.picfood;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -14,7 +15,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class show_in_square extends AppCompatActivity{
+public class show_in_square extends AppCompatActivity {
 
     @Override
     public void onCreate(Bundle savedInstanceState){

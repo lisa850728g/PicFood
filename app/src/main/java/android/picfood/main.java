@@ -1,5 +1,6 @@
 package android.picfood;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -8,7 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class main extends AppCompatActivity {
+public class main extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,8 +21,12 @@ public class main extends AppCompatActivity {
 
         TextView topic = (TextView)findViewById(R.id.topic);
         TextView topic2 = (TextView)findViewById(R.id.topic2);
+        TextView name = (TextView)findViewById(R.id.name);
+
         topic.setTypeface(font);
         topic2.setTypeface(font);
+        name.setTypeface(font);
+
 
         Button logIn=(Button) findViewById(R.id.login);
         Button signUp=(Button) findViewById(R.id.guest);

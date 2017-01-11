@@ -1,5 +1,6 @@
 package android.picfood;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -28,7 +29,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class create_user extends AppCompatActivity {
+public class create_user extends Activity {
     FirebaseAuth auth_sign;
     DatabaseReference myRef = FirebaseDatabase.getInstance().getReference("users");
     private InputMethodManager manager;

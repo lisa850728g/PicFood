@@ -1,5 +1,6 @@
 package android.picfood;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -23,7 +24,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class login extends AppCompatActivity {
+public class login extends Activity {
+
     String userUID;
     FirebaseAuth auth_log;
     FirebaseAuth.AuthStateListener authListener;
@@ -57,9 +59,24 @@ public class login extends AppCompatActivity {
         topic2.setTypeface(font);
 
         Button btn=(Button) findViewById(R.id.button);
-
+        Button bk = (Button)findViewById(R.id.back);
+        bk.setTypeface(font);
         btn.setTypeface(font);
 
+
+        bk.setOnClickListener(new Button.OnClickListener() {
+
+            @Override
+
+            public void onClick(View v) {
+
+                Intent intent = new Intent();
+                intent.setClass(login.this, main.class);
+                startActivity(intent);
+                finish();
+            }
+
+        });
         //font end
 
         btn.setOnClickListener(new View.OnClickListener() {
@@ -94,13 +111,27 @@ public class login extends AppCompatActivity {
                                         new AlertDialog.Builder(login.this)
                                                 .setMessage("This email doesn't exist.Please sign up!")
                                                 .setPositiveButton("Sign Up", new DialogInterface.OnClickListener() {
-                                                    @Override
-                                                    public void onClick(DialogInterface dialog, int which) {
-                                                        Intent turnToCreate = new Intent();
-                                                        turnToCreate.setClass(login.this,create_user.class);
-                                                        startActivity(turnToCreate.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
-                                                    }
-                                                })
+                                                            @Override
+                                                            public void onClick(DialogInterface dialog, int which) {
+                                                                Intent turnToCreate = new Intent();
+                                                                turnToCreate.setClass(login.this, create_user.class);
+                                                                startActivity(turnToCreate.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
+                                                            }
+                                                        }
+
+                                                )
+                                                .setNeutralButton("Cancel", new DialogInterface.OnClickListener() {
+                                                            @Override
+                                                            public void onClick(DialogInterface arg0, int arg1) {
+                                                                // TODO Auto-generated method stub
+                                                                EditText account = ((EditText) findViewById(R.id.account));
+                                                                EditText password = ((EditText) findViewById(R.id.password));
+                                                                account.setText("");
+                                                                password.setText("");
+                                                            }
+
+                                                        }
+                                                )
                                                 .show();
                                     }
                                 }

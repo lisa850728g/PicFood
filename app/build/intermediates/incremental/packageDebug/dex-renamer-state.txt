@@ -1,4 +1,4 @@
-#Sun Jan 08 02:42:59 CST 2017
+#Wed Jan 11 16:33:46 CST 2017
 base.0=C\:\\Users\\USER\\Desktop\\android\\PicFood\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
 renamed.0=classes.dex
 file.0=C\:\\Users\\USER\\Desktop\\android\\PicFood\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex

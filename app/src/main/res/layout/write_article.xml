@@ -11,56 +11,68 @@
         android:id="@+id/product"
         android:layout_alignBaseline="@+id/text_product"
         android:layout_alignBottom="@+id/text_product"
-        android:layout_toEndOf="@+id/text_product"
-        android:layout_marginStart="17dp" />
+        android:layout_toEndOf="@+id/text_product" />
 
     <Button
         android:text="發佈"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/button_release"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:id="@+id/button_release" />
+        android:layout_alignEnd="@+id/store"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"/>
 
     <ImageView
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="58dp"
+        android:layout_marginLeft="10dp"
         android:id="@+id/imageView"
         android:layout_height="100dp"
         android:layout_width="100dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/comment"
-        android:layout_marginStart="15dp"
         android:background="@drawable/camera"
-        android:scaleType="fitXY" />
+        android:scaleType="fitXY"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:text="product :"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="38dp"
         android:id="@+id/text_product"
+        android:textSize="25dp"
         android:layout_alignTop="@+id/imageView"
-        android:layout_toEndOf="@+id/imageView" />
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:text="store :"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/text_store"
+        android:textSize="25dp"
         android:layout_alignBottom="@+id/imageView"
-        android:layout_toStartOf="@+id/product"
-        android:layout_marginBottom="12dp" />
-
-    <EditText
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:layout_marginTop="22dp"
-        android:id="@+id/comment"
-        android:layout_height="300dp"
-        android:layout_width="350dp"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:text="Commend:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/com"
+        android:textSize="25dp"
+        android:layout_marginTop="13dp"
         android:layout_below="@+id/imageView"
-        android:layout_centerHorizontal="true"
-        android:layout_above="@+id/button_release" />
+        android:layout_alignStart="@+id/imageView" />
+    <EditText
+        android:gravity="top"
+        android:id="@+id/comment"
+        android:layout_width="fill_parent"
+        android:layout_height="200dip"
+        android:layout_above="@+id/button_release"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="45dp"
+        android:layout_below="@+id/store"
+        android:background="@android:drawable/edit_text"
+        android:layout_marginTop="50dp"/>
+
+    原文網址：https://read01.com/0odO3.html
 
     <EditText
         android:layout_width="wrap_content"

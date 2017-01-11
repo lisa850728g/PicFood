@@ -1,8 +1,11 @@
 package android.picfood;
 
+import android.app.Activity;
 import android.content.ActivityNotFoundException;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -10,10 +13,13 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -28,7 +34,7 @@ import com.squareup.picasso.Picasso;
 import com.theartofdev.edmodo.cropper.CropImage;
 import com.theartofdev.edmodo.cropper.CropImageView;
 
-public class write_article extends AppCompatActivity{
+public class write_article extends AppCompatActivity {
     Uri imageUri;
     ImageView image;
     Button release;
@@ -38,16 +44,25 @@ public class write_article extends AppCompatActivity{
     StorageReference imaStorage;
     private final static int CAMERA = 66 ;
     private final static int PHOTO = 99 ;
+    private InputMethodManager manager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
+        manager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.write_article);
         image = (ImageView) findViewById(R.id.imageView);
         release = (Button) findViewById(R.id.button_release);
         imaStorage = FirebaseStorage.getInstance().getReference();
 
+        Typeface font = Typeface.createFromAsset(getAssets(), "fonts/NanumBrushScript-Regular.ttf");
+        TextView textP = (TextView)findViewById(R.id.text_product);
+        TextView textS = (TextView)findViewById(R.id.text_store);
+        TextView com = (TextView)findViewById(R.id.com);
+        com.setTypeface(font);
+        textP.setTypeface(font);
+        textS.setTypeface(font);
         //選取圖片來源，手機相簿或拍照
         image.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -122,8 +137,8 @@ public class write_article extends AppCompatActivity{
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        Log.e("class.name",e.getMessage());
-                        Toast.makeText(write_article.this,e.getMessage(), Toast.LENGTH_SHORT).show();
+                        Log.e("class.name", e.getMessage());
+                        Toast.makeText(write_article.this, e.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 });
     }
@@ -150,5 +165,16 @@ public class write_article extends AppCompatActivity{
                 Picasso.with(getApplicationContext()).load(imageUri).into(image);
             }
         }
+    }
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        // TODO Auto-generated method stub
+        if (event.getAction() == MotionEvent.ACTION_DOWN) {
+            if (getCurrentFocus() != null
+                    && getCurrentFocus().getWindowToken() != null) {
+                manager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+            }
+        }
+        return super.onTouchEvent(event);
     }
 }

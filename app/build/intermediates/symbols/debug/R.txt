@@ -753,12 +753,13 @@ int id chronometer 0x7f0c00a6
 int id clip_horizontal 0x7f0c002e
 int id clip_vertical 0x7f0c002f
 int id collapseActionView 0x7f0c0041
-int id comment 0x7f0c00b1
+int id com 0x7f0c00b3
+int id comment 0x7f0c00b4
 int id contentPanel 0x7f0c005c
 int id cropImageView 0x7f0c0089
-int id crop_image_menu_crop 0x7f0c00b6
-int id crop_image_menu_rotate_left 0x7f0c00b4
-int id crop_image_menu_rotate_right 0x7f0c00b5
+int id crop_image_menu_crop 0x7f0c00b7
+int id crop_image_menu_rotate_left 0x7f0c00b5
+int id crop_image_menu_rotate_right 0x7f0c00b6
 int id custom 0x7f0c0062
 int id customPanel 0x7f0c0061
 int id dark 0x7f0c0048
@@ -861,7 +862,7 @@ int id src_over 0x7f0c001f
 int id standard 0x7f0c0046
 int id start 0x7f0c002a
 int id status_bar_latest_event_content 0x7f0c00a1
-int id store 0x7f0c00b3
+int id store 0x7f0c00b1
 int id submenuarrow 0x7f0c0067
 int id submit_area 0x7f0c0078
 int id tabMode 0x7f0c000d
@@ -891,7 +892,7 @@ int id view_offset_helper 0x7f0c000a
 int id wide 0x7f0c0047
 int id withText 0x7f0c0044
 int id wrap_content 0x7f0c0020
-int id write 0x7f0c00b7
+int id write 0x7f0c00b8
 int integer abc_config_activityDefaultDur 0x7f0a0001
 int integer abc_config_activityShortDur 0x7f0a0002
 int integer app_bar_elevation_anim_duration 0x7f0a0003
