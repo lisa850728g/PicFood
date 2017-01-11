@@ -1,34 +1,33 @@
 package android.picfood;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.view.LayoutInflater;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.BaseAdapter;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.util.ArrayList;
-
-public class show_in_square extends AppCompatActivity{
-    private ListView mListView;
-    private MyAdapter mAdapter;
+public class show_in_square extends AppCompatActivity implements FirebaseAuth.AuthStateListener{
+    RecyclerView recyclerView;
+    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+    FirebaseRecyclerAdapter<pics, PhotoViewHolder> adapter;
     DatabaseReference dbRef = FirebaseDatabase.getInstance().getReference("users").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
 
     @Override
@@ -60,130 +59,66 @@ public class show_in_square extends AppCompatActivity{
             }
         });
 
-        mListView = (ListView) findViewById(R.id.list);
-        mAdapter = new MyAdapter();
-        mListView.setAdapter(mAdapter);
-        mListView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+        recyclerView= (RecyclerView) findViewById(R.id.recycler);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        DatabaseReference picRef = FirebaseDatabase.getInstance().getReference("users").child(user.getUid()).child("pics");
+        picRef.limitToLast(10).addValueEventListener(new ValueEventListener() {
             @Override
-            public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
-                new AlertDialog.Builder(show_in_square.this)
-                        .setTitle("want to delele?")
-                        .setMessage("Want to delete " + position + " item?")
-                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                mAdapter.removeItem(position);
-                                mAdapter.notifyDataSetChanged();
-                            }
-                        })
-                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-
-                            }
-                        })
-                        .show();
-
-                return false;
-            }
-        });
-    }
-
-    private ArrayList<pics> list = new ArrayList<pics>();
-
-    private void setupFirebase() {
-
-        DatabaseReference dbRef = FirebaseDatabase.getInstance().getReference("news");
-        dbRef.addChildEventListener(new com.google.firebase.database.ChildEventListener() {
-            @Override
-            public void onChildAdded(com.google.firebase.database.DataSnapshot dataSnapshot, String s) {
-                pics n = new pics();
-                n.setProduct((String) dataSnapshot.child("product").getValue());
-                n.setImageUri((String) dataSnapshot.child("imageUri").getValue());
-                n.setStore((String) dataSnapshot.child("store").getValue());
-
-                list.add(0,n);
-                mAdapter.notifyDataSetChanged();
-            }
-
-            @Override
-            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
-
-            }
-
-            @Override
-            public void onChildRemoved(DataSnapshot dataSnapshot) {
-
-            }
-
-            @Override
-            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
-
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                for (DataSnapshot msgSnapshot : dataSnapshot.getChildren()) {
+                    pics photo = msgSnapshot.getValue(pics.class);
+                    adapter.notifyDataSetChanged();
+                }
             }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-
+                Log.e("Photo", "failed: " + databaseError.getMessage());
             }
         });
+
+        adapter = new FirebaseRecyclerAdapter<pics, PhotoViewHolder>(pics.class, R.layout.pics, PhotoViewHolder.class, picRef) {
+            @Override
+            protected void populateViewHolder(PhotoViewHolder viewHolder, pics model, int position) {
+                viewHolder.setPhoto(model);
+            }
+        };
+        recyclerView.setAdapter(adapter);
     }
 
-    private class MyAdapter extends BaseAdapter {
-        private ArrayList<Integer> mList;
+    @Override
+    public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+        if (user != null) {
+            DatabaseReference ref = FirebaseDatabase.getInstance()
+                    .getReference("users").child(user.getUid());
+            ref.child("Email").setValue(user.getEmail());
+            ref.child("Name").setValue(user.getDisplayName());
+            setupRecyclerView();
+        } else {
 
-        public MyAdapter(){
-            mList = new ArrayList<>();
+        }
+    }
+
+    static class PhotoViewHolder extends RecyclerView.ViewHolder {
+        ImageView image;
+        TextView title;
+        TextView content;
+
+        public PhotoViewHolder(View itemView) {
+            super(itemView);
+            image = (ImageView) itemView.findViewById(R.id.share_image);
+            title = (TextView) itemView.findViewById(R.id.share_product);
+            content = (TextView) itemView.findViewById(R.id.share_store);
         }
 
-        public void addItem(Integer i){
-            mList.add(i);
-        }
-
-        public void removeItem(int index){
-            mList.remove(index);
-        }
-
-        @Override
-        public int getCount() {
-            return mList.size();
-        }
-
-        @Override
-        public Object getItem(int position) {
-            return null;
-        }
-
-        @Override
-        public long getItemId(int position) {
-            return 0;
-        }
-
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-            View v = convertView;
-            MyAdapter.Holder holder;
-            if(v == null){
-                v = LayoutInflater.from(getApplicationContext()).inflate(R.layout.pics, null);
-                holder = new MyAdapter.Holder();
-                holder.product = (TextView) v.findViewById(R.id.share_product);
-                holder.store = (TextView) v.findViewById(R.id.share_store);
-                v.setTag(holder);
-            } else{
-                holder = (MyAdapter.Holder) v.getTag();
-            }
-
-            holder.product.setText("item" + position);
-            /*pics p = new pics();
-
-            holder.product.setText(p.getProduct());
-            holder.store.setText(p.getStore());*/
-
-            return v;
-        }
-        class Holder{
-            TextView product;
-            TextView store;
-            ImageView image;
+        public void setPhoto(pics photo) {
+            title.setText(photo.getProduct());
+            content.setText(photo.getStore());
+            Glide.with(image.getContext())
+                    .load(photo.getImageUri())
+                    .into(image);
         }
     }
 
@@ -200,10 +135,6 @@ public class show_in_square extends AppCompatActivity{
             case R.id.write:
                 startActivity(new Intent(this,write_article.class));
                 return true;
-            case R.id.add://add item
-                mAdapter.addItem(mAdapter.getCount() + 1);
-                mAdapter.notifyDataSetChanged();
-                break;
         }
 
         return super.onOptionsItemSelected(item);
