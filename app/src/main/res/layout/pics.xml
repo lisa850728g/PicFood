@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="110dp">
+    android:layout_width="match_parent" android:layout_height="130dp"
+    android:background="@drawable/buttonshape">
 
     <TextView
         android:layout_width="200dp"
@@ -8,19 +9,20 @@
         android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
         android:text="store name"
         android:id="@+id/share_store"
-        android:layout_alignStart="@+id/share_product"
-        android:layout_alignBottom="@+id/share_image"
-        android:layout_alignParentEnd="true"
-        android:layout_below="@+id/share_product" />
+
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/share_product"
+        android:layout_alignStart="@+id/share_product" />
 
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:layout_marginLeft="20dp"
         android:id="@+id/share_image"
         android:layout_weight="0.28"
+
         android:layout_centerVertical="true"
-        android:layout_toStartOf="@+id/share_store"
-        android:layout_marginEnd="40dp" />
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:layout_width="200dp"
@@ -29,8 +31,8 @@
         android:text="product name"
         android:lines="2"
         android:id="@+id/share_product"
-        android:layout_marginStart="216dp"
+        android:layout_marginLeft="10dp"
         android:layout_alignTop="@+id/share_image"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

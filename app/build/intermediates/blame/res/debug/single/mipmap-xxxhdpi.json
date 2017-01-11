@@ -4,6 +4,10 @@
         "source": "C:\\Users\\user\\PicFood\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
+        "merged": "C:\\Users\\USER\\Desktop\\112\\PicFood\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi\\ic_launcher.png",
+        "source": "C:\\Users\\USER\\Desktop\\112\\PicFood\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
         "merged": "C:\\Users\\user\\Desktop\\PicFood\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi\\ic_launcher.png",
         "source": "C:\\Users\\user\\Desktop\\PicFood\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     }

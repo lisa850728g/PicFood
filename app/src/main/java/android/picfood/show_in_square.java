@@ -35,6 +35,7 @@ public class show_in_square extends AppCompatActivity implements FirebaseAuth.Au
         super.onCreate(savedInstanceState);
         setContentView(R.layout.show_in_square);
 
+
         Typeface font = Typeface.createFromAsset(getAssets(), "fonts/NanumBrushScript-Regular.ttf");
 
         TextView textView = (TextView)findViewById(R.id.textView);
@@ -95,7 +96,7 @@ public class show_in_square extends AppCompatActivity implements FirebaseAuth.Au
                     .getReference("users").child(user.getUid());
             ref.child("Email").setValue(user.getEmail());
             ref.child("Name").setValue(user.getDisplayName());
-            setupRecyclerView();
+
         } else {
 
         }

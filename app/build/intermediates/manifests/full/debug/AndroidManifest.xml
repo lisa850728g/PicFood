@@ -53,12 +53,6 @@
             android:exported="false"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
-        <provider
-            android:name="com.google.firebase.provider.FirebaseInitProvider"
-            android:authorities="android.picfood.firebaseinitprovider"
-            android:exported="false"
-            android:initOrder="100" />
-
         <receiver
             android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
             android:enabled="true"
@@ -107,6 +101,12 @@
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
+
+        <provider
+            android:name="com.google.firebase.provider.FirebaseInitProvider"
+            android:authorities="android.picfood.firebaseinitprovider"
+            android:exported="false"
+            android:initOrder="100" />
     </application>
 
 </manifest>
