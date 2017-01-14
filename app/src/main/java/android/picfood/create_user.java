@@ -8,7 +8,6 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
@@ -43,27 +42,26 @@ public class create_user extends Activity {
         auth_sign = FirebaseAuth.getInstance();
         manager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
 
-        //font
+        /*字型設定*/
         Typeface font = Typeface.createFromAsset(getAssets(), "fonts/NanumBrushScript-Regular.ttf");
         TextView topic = (TextView) findViewById(R.id.topic);
         TextView topic2 = (TextView) findViewById(R.id.topic2);
         topic.setTypeface(font);
         topic2.setTypeface(font);
-        //font end
+
+        /*返回至main*/
         Button bk = (Button)findViewById(R.id.back);
         bk.setOnClickListener(new Button.OnClickListener(){
-
             @Override
-
             public void onClick(View v) {
-
                 Intent intent = new Intent();
                 intent.setClass(create_user.this, main.class);
                 startActivity(intent);
                 finish();
             }
-
         });
+
+        /*判斷使用者資料是否輸入完整且正確*/
         Button signEnter = (Button) findViewById(R.id.signEnter);
         signEnter.setOnClickListener(new Button.OnClickListener() {
             @Override
@@ -88,6 +86,7 @@ public class create_user extends Activity {
 
     }
 
+    /*判斷使用者名稱是否已使用*/
     private void upInfo(final String name, final String email, final String pw) {
         myRef.child(name).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -106,6 +105,7 @@ public class create_user extends Activity {
         });
     }
 
+    /*創建帳號*/
     private void createUser(final String name, final String email, String password) {
         auth_sign.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(
@@ -144,6 +144,7 @@ public class create_user extends Activity {
                 });
     }
 
+    /*確認是否為email*/
     boolean isEmailValid(CharSequence email) {
         return android.util.Patterns.EMAIL_ADDRESS.matcher(email)
                 .matches();

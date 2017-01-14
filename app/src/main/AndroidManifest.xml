@@ -6,8 +6,8 @@ package="android.picfood">
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label=""
+        android:icon="@mipmap/open"
+        android:label="PicFood"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".main">

@@ -1,6 +1,6 @@
 package android.picfood;
 
-import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -42,6 +42,7 @@ public class write_article extends AppCompatActivity {
     String store;
     String comment;
     StorageReference imaStorage;
+    ProgressDialog imgProgress;
     private final static int CAMERA = 66 ;
     private final static int PHOTO = 99 ;
     private InputMethodManager manager;
@@ -55,6 +56,7 @@ public class write_article extends AppCompatActivity {
         image = (ImageView) findViewById(R.id.imageView);
         release = (Button) findViewById(R.id.button_release);
         imaStorage = FirebaseStorage.getInstance().getReference();
+        imgProgress = new ProgressDialog(this);
 
         Typeface font = Typeface.createFromAsset(getAssets(), "fonts/NanumBrushScript-Regular.ttf");
         TextView textP = (TextView)findViewById(R.id.text_product);
@@ -100,6 +102,8 @@ public class write_article extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 saveToFirebase();
+                imgProgress.setMessage("Uploading ...");
+                imgProgress.show();
             }
         });
     }
@@ -119,14 +123,10 @@ public class write_article extends AppCompatActivity {
                             Toast.makeText(write_article.this, "Please fill in all blanks",Toast.LENGTH_SHORT).show();
                         else{
                             Uri picUri = taskSnapshot.getDownloadUrl();
-                            Toast.makeText(write_article.this, "Success",Toast.LENGTH_SHORT).show();
+                            imgProgress.dismiss();
                             //將資訊上傳至database
-                            DatabaseReference ref = FirebaseDatabase.getInstance().getReference("users").child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                                    .child("pics").push();
-                            ref.child("imageUri").setValue(picUri.toString());
-                            ref.child("product").setValue(product);
-                            ref.child("store").setValue(store);
-                            ref.child("comment").setValue(comment);
+                            DatabaseReference ref = FirebaseDatabase.getInstance().getReference("profiles");
+                            ref.push().setValue(new pics(product,store,picUri.toString(),comment));
                             Intent ToShow = new Intent();
                             ToShow.setClass(write_article.this,show_in_square.class);
                             startActivity(ToShow.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));

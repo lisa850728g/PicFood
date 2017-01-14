@@ -1,23 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\USER\\Desktop\\112\\PicFood\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi\\plus_icon.png",
-        "source": "C:\\Users\\USER\\Desktop\\112\\PicFood\\app\\src\\main\\res\\mipmap-mdpi\\plus_icon.png"
-    },
-    {
-        "merged": "C:\\Users\\user\\Desktop\\PicFood\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi\\plus_icon.png",
-        "source": "C:\\Users\\user\\Desktop\\PicFood\\app\\src\\main\\res\\mipmap-mdpi\\plus_icon.png"
-    },
-    {
-        "merged": "C:\\Users\\user\\Desktop\\PicFood\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi\\ic_launcher.png",
-        "source": "C:\\Users\\user\\Desktop\\PicFood\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\user\\PicFood\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi\\out.png",
+        "source": "C:\\Users\\user\\PicFood\\app\\src\\main\\res\\mipmap-mdpi\\out.png"
     },
     {
         "merged": "C:\\Users\\user\\PicFood\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi\\plus_icon.png",
         "source": "C:\\Users\\user\\PicFood\\app\\src\\main\\res\\mipmap-mdpi\\plus_icon.png"
-    },
-    {
-        "merged": "C:\\Users\\USER\\Desktop\\112\\PicFood\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi\\ic_launcher.png",
-        "source": "C:\\Users\\USER\\Desktop\\112\\PicFood\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },
     {
         "merged": "C:\\Users\\user\\PicFood\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi\\ic_launcher.png",

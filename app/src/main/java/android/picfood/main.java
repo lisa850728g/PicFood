@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -16,7 +15,7 @@ public class main extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
-
+        /*字型設定*/
         Typeface font = Typeface.createFromAsset(getAssets(), "fonts/NanumBrushScript-Regular.ttf");
 
         TextView topic = (TextView)findViewById(R.id.topic);
@@ -27,12 +26,12 @@ public class main extends Activity {
         topic2.setTypeface(font);
         name.setTypeface(font);
 
-
         Button logIn=(Button) findViewById(R.id.login);
         Button signUp=(Button) findViewById(R.id.guest);
         logIn.setTypeface(font);
         signUp.setTypeface(font);
 
+        /*跳至log in頁面*/
         logIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -41,6 +40,8 @@ public class main extends Activity {
                 startActivity(ToLogIn.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
             }
         });
+
+        /*跳至sign up頁面*/
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -50,6 +51,4 @@ public class main extends Activity {
             }
         });
     }
-
-
 }

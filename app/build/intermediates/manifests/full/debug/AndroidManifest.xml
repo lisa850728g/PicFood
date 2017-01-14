@@ -22,8 +22,8 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label=""
+        android:icon="@mipmap/open"
+        android:label="PicFood"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
         <activity android:name="android.picfood.main" >
@@ -52,6 +52,12 @@
             android:name="com.google.android.gms.common.api.GoogleApiActivity"
             android:exported="false"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <provider
+            android:name="com.google.firebase.provider.FirebaseInitProvider"
+            android:authorities="android.picfood.firebaseinitprovider"
+            android:exported="false"
+            android:initOrder="100" />
 
         <receiver
             android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
@@ -101,12 +107,6 @@
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
-
-        <provider
-            android:name="com.google.firebase.provider.FirebaseInitProvider"
-            android:authorities="android.picfood.firebaseinitprovider"
-            android:exported="false"
-            android:initOrder="100" />
     </application>
 
 </manifest>

@@ -1,5 +1,7 @@
 package android.picfood;
 
+/*取得貼文所有資料
+* 用set和get的方式進行設定和拿取*/
 public class pics{
     private String product;
     private String store;

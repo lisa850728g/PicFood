@@ -1,9 +1,11 @@
 package android.picfood;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -28,14 +30,15 @@ public class show_in_square extends AppCompatActivity implements FirebaseAuth.Au
     RecyclerView recyclerView;
     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
     FirebaseRecyclerAdapter<pics, PhotoViewHolder> adapter;
-    DatabaseReference dbRef = FirebaseDatabase.getInstance().getReference("users").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
+    DatabaseReference dbRef = FirebaseDatabase.getInstance().getReference("users");
+    LinearLayoutManager mLayoutManager;
 
     @Override
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.show_in_square);
 
-
+        /*字型設定*/
         Typeface font = Typeface.createFromAsset(getAssets(), "fonts/NanumBrushScript-Regular.ttf");
 
         TextView textView = (TextView)findViewById(R.id.textView);
@@ -47,7 +50,8 @@ public class show_in_square extends AppCompatActivity implements FirebaseAuth.Au
 
         final TextView t = (TextView)findViewById(R.id.textView);
 
-        dbRef.child("Name").addValueEventListener(new ValueEventListener() {
+        /*取得使用者名稱，並顯示*/
+        dbRef.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("Name").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 String showName = (String) dataSnapshot.getValue();
@@ -61,11 +65,16 @@ public class show_in_square extends AppCompatActivity implements FirebaseAuth.Au
         });
 
         recyclerView= (RecyclerView) findViewById(R.id.recycler);
+        mLayoutManager = new LinearLayoutManager(this);
+        //讓最新資料從上方進入
+        mLayoutManager.setReverseLayout(true);
+        //Recycler view從頂部開始顯示
+        mLayoutManager.setStackFromEnd(true);
         recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setLayoutManager(mLayoutManager);
 
-        DatabaseReference picRef = FirebaseDatabase.getInstance().getReference("users").child(user.getUid()).child("pics");
-        picRef.limitToLast(10).addValueEventListener(new ValueEventListener() {
+        DatabaseReference picRef = FirebaseDatabase.getInstance().getReference("profiles");
+        picRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for (DataSnapshot msgSnapshot : dataSnapshot.getChildren()) {
@@ -83,7 +92,7 @@ public class show_in_square extends AppCompatActivity implements FirebaseAuth.Au
         adapter = new FirebaseRecyclerAdapter<pics, PhotoViewHolder>(pics.class, R.layout.pics, PhotoViewHolder.class, picRef) {
             @Override
             protected void populateViewHolder(PhotoViewHolder viewHolder, pics model, int position) {
-                viewHolder.setPhoto(model);
+                viewHolder.setPhoto(model);//將資料傳入
             }
         };
         recyclerView.setAdapter(adapter);
@@ -96,9 +105,7 @@ public class show_in_square extends AppCompatActivity implements FirebaseAuth.Au
                     .getReference("users").child(user.getUid());
             ref.child("Email").setValue(user.getEmail());
             ref.child("Name").setValue(user.getDisplayName());
-
         } else {
-
         }
     }
 
@@ -107,6 +114,7 @@ public class show_in_square extends AppCompatActivity implements FirebaseAuth.Au
         TextView title;
         TextView content;
 
+        /*設定資料放置位置*/
         public PhotoViewHolder(View itemView) {
             super(itemView);
             image = (ImageView) itemView.findViewById(R.id.share_image);
@@ -114,6 +122,7 @@ public class show_in_square extends AppCompatActivity implements FirebaseAuth.Au
             content = (TextView) itemView.findViewById(R.id.share_store);
         }
 
+        /*將資料放入*/
         public void setPhoto(pics photo) {
             title.setText(photo.getProduct());
             content.setText(photo.getStore());
@@ -131,10 +140,29 @@ public class show_in_square extends AppCompatActivity implements FirebaseAuth.Au
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
-        //handle presses on the action bar items
+        /*handle presses on the action bar items*/
         switch(item.getItemId()){
+            //按下加號
             case R.id.write:
                 startActivity(new Intent(this,write_article.class));
+                return true;
+            //按下門
+            case R.id.signOut:
+                new AlertDialog.Builder(show_in_square.this)
+                        .setMessage("Want to sign out?")
+                        .setPositiveButton("Sign out", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        FirebaseAuth.getInstance().signOut();
+                                        Intent turnToCreate = new Intent();
+                                        turnToCreate.setClass(show_in_square.this, login.class);
+                                        startActivity(turnToCreate.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
+                                    }
+                                }
+
+                        )
+                        .setNeutralButton("Cancel", null)
+                        .show();
                 return true;
         }
 

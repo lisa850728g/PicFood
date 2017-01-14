@@ -8,7 +8,6 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
@@ -25,7 +24,6 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class login extends Activity {
-
     String userUID;
     FirebaseAuth auth_log;
     FirebaseAuth.AuthStateListener authListener;
@@ -36,7 +34,7 @@ public class login extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
         manager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-        //
+
         auth_log = FirebaseAuth.getInstance();
         authListener = new FirebaseAuth.AuthStateListener() {
             @Override
@@ -50,7 +48,7 @@ public class login extends Activity {
             }
         };
 
-        //font
+        /*字型設定*/
         Typeface font = Typeface.createFromAsset(getAssets(), "fonts/NanumBrushScript-Regular.ttf");
 
         TextView topic = (TextView)findViewById(R.id.topic);
@@ -63,13 +61,12 @@ public class login extends Activity {
         bk.setTypeface(font);
         btn.setTypeface(font);
 
-
+        /*返回至main*/
         bk.setOnClickListener(new Button.OnClickListener() {
 
             @Override
 
             public void onClick(View v) {
-
                 Intent intent = new Intent();
                 intent.setClass(login.this, main.class);
                 startActivity(intent);
@@ -77,8 +74,8 @@ public class login extends Activity {
             }
 
         });
-        //font end
 
+        /*判斷是否可登入*/
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -150,7 +147,6 @@ public class login extends Activity {
         super.onStop();
         auth_log.removeAuthStateListener(authListener);
     }
-
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
